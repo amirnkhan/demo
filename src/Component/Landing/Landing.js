@@ -18,40 +18,21 @@ const landing = () => {
         <div className="landing">
         <div>
             <header className="Header">
-            <img src= {img} style={{width:"40", height:"40"}}
-            />
-            
-                  <div className="leftsidebar">
-               
-                      <p className="para">Couponxnge</p>
+             <div className="leftsidebar">
+             <img src= {img} style={{width:50, height:50}}/>
+              <p className="para">Couponxnge</p>
             </div>
-            <div>
-              
-
-<TextField
-        
-        id="input-with-icon-textfield"
-        label="TextField"
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="end">
-             <SearchIcon />
-            </InputAdornment>
-          ),
-        }}
-      />
-                
+            <div className='searchbox'>
+              <input type="text" className="search" placeholder="Search Here"/>
+                <img src='https://icons-for-free.com/iconfiles/png/512/explore+find+magnifier+search+icon-1320185008030646474.png' 
+                style={{width:20,height:20,marginTop:6}} />
                 </div>
-                <div className="enter">
-                 <a href="/login">Login/Register</a>
+                <div className="button">
+                 <p className="para1">Login/Register</p>
                 </div>
                
             </header>
             </div>
-
-{/* <MIDDLEH JISME PARA , BUTTON WITH CARD> */}
-
-
 
             
             <Grid container spacing={3} alignItems="center">
@@ -65,37 +46,41 @@ const landing = () => {
             <h2># simply list your coupon code &</h2>
             <h2># and get paid</h2>
             </div>
-            <div className="button">
-            <Link href="/">
-        Explore
-      </Link>
+            <div className="button">   
+       <p className="para1">Explore</p>
       </div>
                 </div>
         </Grid>
         <Grid item xs={12} sm={12} md={6} lg={6}>
         <div className="Pcard">
                 <div className="card">
-                      <h1></h1>
+                  <img src="https://static.thenounproject.com/png/3159319-200.png" className="cardimg"/>
+                      <p className="para2">Mutual Funds</p>
 
                 </div>
                 <div className="card">
-                      <h1></h1>
+                  <img src="https://static.thenounproject.com/png/3159319-200.png" className="cardimg"/>
+                      <p className="para2">Stocks</p>
                       
                 </div>
                 <div className="card">
-                      <h1></h1>
+                  <img src="https://static.thenounproject.com/png/3159319-200.png" className="cardimg"/>
+                      <p className="para2">Future & Options</p>
                       
                 </div>
                 <div className="card">
-                      <h1></h1>
+                  <img src="https://static.thenounproject.com/png/3159319-200.png" className="cardimg"/>
+                      <p className="para2">US Stocks</p>
                       
                 </div>
                 <div className="card">
-                      <h1></h1>
+                  <img src="https://static.thenounproject.com/png/3159319-200.png" className="cardimg"/>
+                      <p className="para2">Golds</p>
                       
                 </div>
                 <div className="card">
-                      <h1></h1>
+                  <img src="https://static.thenounproject.com/png/3159319-200.png" className="cardimg"/>
+                      <p className="para2">Fixed Deposites</p>
                       
                 </div>
                 </div>

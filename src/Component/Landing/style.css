@@ -7,23 +7,23 @@
     
 }
 
-.leftsidebar p{
+.leftsidebar{
     
-    display: contents;
-    text-align: end;
-    color: darkgreen;
-    font-size: 40px;
-    margin-left: 160px;
-
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.para{
+    font-size: 30px;
+    margin-top: 1px;
+    font-weight: bold;
 }
 .enter{
-/* width: 100px; */
-height: 40px;
-padding: 12px 20px;
-background-color: #0f751a;
+height: 35px;
+padding: 8px 20px;
+background-color: #00d09c;
 border-radius: 8px;
-
-font-size: 20px;
+font-size: 25px;
 }
 .enter a{
     text-decoration: none;
@@ -32,19 +32,19 @@ font-size: 20px;
   
    
 
-.search{
-width: 450px;
-height: 40px;    
 
-}
 .button{
- margin-bottom: auto;
-height: 40px;
-padding: 12px 20px;
-background-color: #0f751a;
+height: 25px;
+padding: 15px 18px;
+background-color: #00d09c;
 border-radius: 8px;
-width: 200px;
-font-size: 30px;
+width: 130px;
+}
+.para1{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin-top: -2px;
+    font-weight: bold;
 }
 .middle{
     flex-direction: row;
@@ -54,7 +54,6 @@ font-size: 30px;
 }
 .landing{
     padding: 15px 10px;
-    background-color: rgb(65, 127, 207);
     height: 100vh;
     width: 100%;
 }
@@ -85,16 +84,41 @@ font-size: 30px;
 }
 .card{
 
-     background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-26.jpg");
-    width: 150px;
+    width: 220px;
     height: 150px;
-    color: rgb(26, 65, 99);
-    border:1px solid rgb(207, 207, 207);
-    box-shadow: 1px 1px rgba(104, 102, 102, 0.1);
-    flex-basis: 45%;
-    margin: 10px;
+    padding: 25px 15px;
+    border: 1px solid #ecedef;
+    box-shadow: 0 1px 5px 3px#0000001a;
+    margin: 20px 30px;
     border-radius: 20px;
     text-align: center;
     background-position: center;
     background-size: cover;
 }
+.searchbox{
+   
+    height: 30px;
+    padding: 6px;
+    border: 1px solid #ecedef;
+    box-shadow: 0 1px 5px 1px#0000001a;
+    border-radius: 6px;
+    flex-direction: row;
+    display: flex;
+}
+.search{
+    height: 30px;    
+    width: 350px;
+    border: none;
+    }
+    .para2{
+        text-align: left;
+        font-weight: 600;
+        font-size: 18px;
+        color: #44475b;
+        margin-top: 60px;
+    }
+    .cardimg{
+width: 50px;
+height: 50px;
+margin-left: -150px;
+    }
