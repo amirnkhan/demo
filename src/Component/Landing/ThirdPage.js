@@ -46,9 +46,10 @@ export default function ThirdPage() {
           />
         </div>
         <div>
-          <button style={{ width: "90px", marginTop: "30px", padding: "10px" }}>
-            Subscribe
-          </button>
+         
+          <div className="button">
+                  <p className="para1"> Subscribe</p>
+                </div>
         </div>
       </div>
     </div>

@@ -9,29 +9,29 @@ import Myntra from "../../assest/myntra.png";
 export default function SecondPage() {
   return (
     <div className="second-page">
-      <Grid container spacing={3} alignItems="center">
-        <Grid item xs={12} sm={12} md={6} lg={4}>
+      <Grid container >
+        <Grid item xs={6} sm={4} md={4} lg={4}>
           <div className="PcardS">
             <div className="cardS">
               <img src={Amazon} alt="ff" />
             </div>
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={4}>
+        <Grid item xs={6} sm={4} md={4} lg={4}>
           <div className="PcardS">
             <div className="cardS">
               <img src={Flipkart} alt="ff" />
             </div>
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={4}>
+        <Grid item xs={6} sm={4} md={4} lg={4}>
           <div className="PcardS">
             <div className="cardS">
               <img src={Myntra} alt="ff" />
             </div>
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={4}>
+        <Grid item xs={6} sm={4} md={4} lg={4}>
           <div className="PcardS">
             <div className="cardS">
               <img src={Uber} alt="ff" />
@@ -45,7 +45,7 @@ export default function SecondPage() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={6} lg={4}>
+        <Grid item xs={6} sm={4} md={4} lg={4}>
           <div className="PcardS">
             <div className="cardS">
               <img src={Nykaa} alt="ff" />

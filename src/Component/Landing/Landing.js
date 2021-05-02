@@ -1,17 +1,31 @@
-import React from "react";
+import React,{useState} from "react";
 import "./style.css";
 import Grid from "@material-ui/core/Grid";
 import img from "../../assest/website.png";
 import SearchIcon from "@material-ui/icons/Search";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
-
+import PopupBox from "../PopUp"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SecondPage from "./SecondPage";
 import ThirdPage from "./ThirdPage";
-const landing = () => {
+
+
+
+function Landing() {
+  const [open, setOpen] = React.useState(false);
+  const [age, setAge] = React.useState('');
+  
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  
+  const handleClose = () => {
+    setOpen(false);
+  }
   return (
     <div>
+      <PopupBox open={open} setOpen={setOpen}/>
       <div className="landing">
         <div>
           <header className="Header">
@@ -26,7 +40,7 @@ const landing = () => {
                 style={{ width: 20, height: 20, marginTop: 6 }}
               />
             </div>
-            <Link to="/login" className="link1">
+            <Link  className="link1" onClick={handleClickOpen}>
               <div className="button">
                 <p className="para1">Login/Register</p>
               </div>
@@ -34,7 +48,7 @@ const landing = () => {
           </header>
         </div>
 
-        <Grid container spacing={3} alignItems="center">
+        <Grid container>
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <div className="theorytotal">
               <div className="theory">
@@ -62,7 +76,7 @@ const landing = () => {
                       style={{
                         backgroundColor: "black",
                         color: "white",
-                        border: "0px",
+                       
                       }}
                     >
                       BUY GIFT CARD
@@ -74,7 +88,7 @@ const landing = () => {
                       style={{
                         backgroundColor: "yellow",
                         color: "black",
-                        border: "0px",
+                       
                       }}
                     >
                       SELL GIFT CARD
@@ -117,4 +131,4 @@ const landing = () => {
   );
 };
 
-export default landing;
+export default Landing;

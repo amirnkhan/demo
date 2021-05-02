@@ -67,7 +67,7 @@ export const Landing1 = () => {
                 <p className="filter1">CARD TYPE </p>
               </div>
               <div>
-                <p className="filter1">Categories</p>
+                <p className="filter1">CATEGORIES</p>
               </div>
             </div>
           </Grid>
