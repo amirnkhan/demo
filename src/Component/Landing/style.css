@@ -1,3 +1,9 @@
+.landing{
+    padding: 15px 10px;
+    height: 100vh;
+    width: 100%;
+}
+
 .Header{
     width: 100%;
     height: 88px;
@@ -13,7 +19,7 @@
     flex-direction: row;
     justify-content: center;
 }
-.para{
+.para3{
     font-size: 30px;
     margin-top: 1px;
     font-weight: bold;
@@ -45,6 +51,10 @@ width: 130px;
     color: rgb(255, 255, 255);
     margin-top: -2px;
     font-weight: bold;
+    text-align: center;
+}
+.link1{
+    text-decoration: none;
 }
 .middle{
     flex-direction: row;
@@ -52,11 +62,7 @@ width: 130px;
     display: flex;
     flex-basis: 50%;
 }
-.landing{
-    padding: 15px 10px;
-    height: 100vh;
-    width: 100%;
-}
+
 
 .button a{
     text-decoration: none;
@@ -71,7 +77,8 @@ width: 130px;
     
 }
 .theoryp{
-    font-size: 30px;
+    
+    font-size: 40px;
     text-decoration: solid black;
     margin: left;
     padding: auto;
@@ -80,20 +87,33 @@ width: 130px;
     flex-basis: 50%;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
     
 }
 .card{
 
-    width: 220px;
-    height: 150px;
-    padding: 25px 15px;
+    background-color:rgb(0, 174, 255) ;
+    width: 600px;
+    height: 450px;
+    padding: 2px 15px;
     border: 1px solid #ecedef;
     box-shadow: 0 1px 5px 3px#0000001a;
-    margin: 20px 30px;
+    /* margin: 20px 30px; */
     border-radius: 20px;
     text-align: center;
     background-position: center;
     background-size: cover;
+}
+.card button{
+    width: 120px;
+    padding: 10px;
+    /* background-color: blueviolet; */
+    /* color: white; */
+    border-radius: 10px;
+    margin: 10px;
+    
+
 }
 .searchbox{
    
@@ -109,16 +129,178 @@ width: 130px;
     height: 30px;    
     width: 350px;
     border: none;
+    outline: none;
     }
     .para2{
-        text-align: left;
         font-weight: 600;
-        font-size: 18px;
-        color: #44475b;
+        font-size: 38px;
+        font-weight: 900;
+        color: white;
         margin-top: 60px;
     }
     .cardimg{
-width: 50px;
-height: 50px;
-margin-left: -150px;
+width: 280px;
+height: 280px;
+align-items: center;
+align-self: center;
     }
+.second-page{
+    height: 100vh;
+     background-image: url('../../assest/8855.jpg'); 
+     background-size: cover;
+}
+
+.PcardS{
+    
+   
+    
+}
+.cardS{
+   margin-left: auto;
+   margin-right: auto;
+   align-self: center;
+   width: 350px;
+   margin: 20px;
+  
+
+} 
+
+.third-page{
+    height: 100vh;
+     background-image: url('../../assest/third.jfif'); 
+     background-size: cover;
+    
+}
+.paraT{
+    color: white;
+    /* background-color: white; */
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 10px;
+
+}
+.searchT1{
+    height: 30px;    
+    width: 350px;
+    
+ 
+}
+.thirdH{
+width: 100%;
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.searchT{
+        border-radius: 6px;
+    flex-direction: row;
+    margin-top: 80px;
+   
+}
+
+.middleT{
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<   L A N D I N G """""1""" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.landing1{
+    margin: 0px;
+    padding: 0px;
+}
+.landing1H{
+    width: 100%;
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(40, 87, 187);
+}
+
+.landing1HS{
+    width: 100%;
+    height: 50px;
+    
+    background-color: rgb(28, 52, 97);
+}
+.search1H{
+    width: 300px;
+    
+    margin: 10px;
+    padding: 6px;
+    
+}
+.landing1H_{
+    /* font-weight: 900; */
+    background-color: rgb(255, 255, 255);
+    width: 20%;
+
+    font-size: 35px;
+    text-align: center;
+    
+}
+.iconL1{
+}
+.landing1HS{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* 
+.landing1HT{
+    width: 100%;
+    height: 70px;
+} */
+.container{
+    margin: 10px;
+}
+
+.leftcontainer{
+    width: 70%;
+    padding: 10px;
+    
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    margin-left: 20px;
+}
+.filter{
+    
+    color: white;
+    background: blue;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin: 1px;
+}
+.filter1{
+   padding: 10px;
+    color: white;
+    background-color: silver;
+    font-size: 20px;
+    text-align: center;
+    margin: 1px;
+}
+
+.cardSL{
+    margin: 10px;
+    margin-left: 30px;
+}
+.fooimg{
+    background: black;
+}
+.fooimg img{
+    width: 85%;
+    padding: 10px;
+    height: 320px;
+    
+}

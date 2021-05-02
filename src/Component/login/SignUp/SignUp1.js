@@ -114,7 +114,7 @@ export default function SignUp1() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <Link to="form">
+          <Link to="/" className="link1">
           <Button
             type="submit"
             fullWidth
@@ -128,12 +128,12 @@ export default function SignUp1() {
           <Grid container>
           
             <Grid item xs>
-              <Link>
+              <Link className="link1">
               <p className="para">  Forgot password?</p>
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link to="/login" className="link1">
               <p className="para"> "Don't have an account? Sign Up"</p>
               </Link>
             </Grid>

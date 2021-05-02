@@ -9,6 +9,7 @@ import Form from './Component/Form/Form';
 import SignUp1 from "./Component/login/SignUp/SignUp1";
 import Login1 from "./Component/login/SignUp/Login1";
 import Landing from "./Component/Landing/Landing";
+import { Landing1 } from './Component/Landing/Landing1';
 function App() {
   return (
     <>
@@ -31,7 +32,10 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-        <Route exact path="/">
+        <Route exact path="/landing1">
+            <Landing1 />
+          </Route>
+          <Route exact path="/">
             <Landing />
           </Route>
           <Route exact path="/login">
