@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -7,6 +7,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import TextField from "@material-ui/core/TextField";
 import CloseIcon from "@material-ui/icons/Close";
 import {Link} from "react-router-dom"
+import {auth} from '../firebase'
+import { unstable_batchedUpdates } from "react-dom";
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
@@ -35,10 +37,31 @@ const useStyles = makeStyles((theme) => ({
 export default function PopupBox({ open, setOpen }) {
   const classes = useStyles();
   const [age, setAge] = React.useState(true);
+  const [name,setName] = useState('')
+    const [email,setEmail] = useState('')
+    const [password,setPassword] = useState('')
+    const [image,setImage] = useState(null)
 
   const handleClose = () => {
     setOpen(false);
   };
+
+  const register = () =>{
+    auth.createUserWithEmailAndPassword(email,password)
+    .then((authUser) =>{
+        authUser.user.updateProfile({
+            displayName:name,
+           
+        })
+        setOpen(false)
+    }).catch((error)=>alert(error.message))
+        }
+
+        const signIn = () =>{
+          auth.signInWithEmailAndPassword(email,password)
+         .then(()=> setOpen(false))
+          .catch((error)=>alert(error));
+             }
 
   return (
     <Dialog
@@ -62,7 +85,8 @@ export default function PopupBox({ open, setOpen }) {
             required
             id="standard-disabled"
             label="Email"
-            
+            value={email}
+onChange={(text)=>setEmail(text.target.value)}
             fullWidth
             className={classes.textfield}
           />
@@ -70,6 +94,8 @@ export default function PopupBox({ open, setOpen }) {
             id="standard-password-input"
             label="Password"
             type="password"
+            value={password}
+onChange={(text)=>setPassword(text.target.value)}
             fullWidth
             autoComplete="current-password"
             className={classes.textfield}
@@ -78,7 +104,7 @@ export default function PopupBox({ open, setOpen }) {
         </form>
       </DialogContent>
       <div style={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
-      <Button color="primary" variant="outlined" className={classes.buttonn}>
+      <Button color="primary" variant="outlined" onClick={signIn} className={classes.buttonn}>
         Sign In
       </Button>
       </div>
@@ -107,6 +133,8 @@ export default function PopupBox({ open, setOpen }) {
             id="standard-disabled"
             label="Name"
             fullWidth
+            value={name}
+  onChange={(text)=>setName(text.target.value)}
             className={classes.textfield}
           />
            <TextField
@@ -121,6 +149,8 @@ export default function PopupBox({ open, setOpen }) {
             id="standard-disabled"
             label="Email"
             fullWidth
+            value={email}
+onChange={(text)=>setEmail(text.target.value)}
             className={classes.textfield}
           />
           <TextField
@@ -128,6 +158,8 @@ export default function PopupBox({ open, setOpen }) {
             label="Password"
             type="password"
             fullWidth
+            value={password}
+ onChange={(text)=>setPassword(text.target.value)}
             autoComplete="current-password"
             className={classes.textfield}
           />
@@ -135,7 +167,7 @@ export default function PopupBox({ open, setOpen }) {
         </form>
       </DialogContent>
       <div style={{display:'flex',flexDirection:'row',justifyContent:'center'}}>
-      <Button color="primary" variant="outlined" className={classes.buttonn}>
+      <Button color="primary" variant="outlined" onClick={register} className={classes.buttonn}>
         Sign Up
       </Button>
       </div>
