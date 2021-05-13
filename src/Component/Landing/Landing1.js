@@ -13,13 +13,16 @@ import Nykaa from "../../assest/nykaa.png";
 import Myntra from "../../assest/myntra.png";
 import footer from "../../assest/footer.png";
 import { Flip } from "@material-ui/icons";
+import {auth,db} from '../../firebase'
 
 export const Landing1 = () => {
   return (
     <div className="landing1">
       <div className="landing1H">
         <div className="landing1H_">Couponxnge</div>
+        <p style={{ fontSize: "2.3rem", marginTop:5, color: "skyblue" }}>{auth?.currentUser?.displayName}</p>
         <div className="iconL1">
+         
           <PermIdentityIcon
             style={{ fontSize: "2.0rem", padding: "10px", color: "skyblue" }}
           />

@@ -9,7 +9,7 @@ import PopupBox from "../PopUp"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SecondPage from "./SecondPage";
 import ThirdPage from "./ThirdPage";
-
+import {auth} from '../../firebase'
 
 
 function Landing() {
@@ -25,6 +25,8 @@ function Landing() {
   }
   return (
     <div>
+      
+      <div>
       <PopupBox open={open} setOpen={setOpen}/>
       <div className="landing">
         <div>
@@ -127,7 +129,7 @@ function Landing() {
       </div>
       <SecondPage />
       <ThirdPage />
-    </div>
+    </div></div>
   );
 };
 

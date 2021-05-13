@@ -6,7 +6,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import TextField from "@material-ui/core/TextField";
 import CloseIcon from "@material-ui/icons/Close";
-import {Link} from "react-router-dom"
+import {Link,Redirect} from "react-router-dom"
 import {auth} from '../firebase'
 import { unstable_batchedUpdates } from "react-dom";
 const useStyles = makeStyles((theme) => ({
@@ -53,6 +53,7 @@ export default function PopupBox({ open, setOpen }) {
             displayName:name,
            
         })
+        .then(()=>{alert(' Successful Signed Up Please Login to Continue')})
         setOpen(false)
     }).catch((error)=>alert(error.message))
         }
@@ -60,7 +61,11 @@ export default function PopupBox({ open, setOpen }) {
         const signIn = () =>{
           auth.signInWithEmailAndPassword(email,password)
          .then(()=> setOpen(false))
+         .then(()=>{alert('Login Successful')})
+         .then(()=>{ <Redirect to='/landing1'  />})
           .catch((error)=>alert(error));
+         
+             
              }
 
   return (
